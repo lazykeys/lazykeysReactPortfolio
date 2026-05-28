@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: DigitalDiscoRegular;
+    src: url("./assets/fonts/DigitalDisco.ttf");
+}
+
+@font-face {
+    font-family: DigitalDiscoThin;
+    src: url("./assets/fonts/DigitalDisco-Thin.ttf");
+}
+
+@theme {
+    --color-lk-0: #030318;
+    --color-lk-1: #16164D;
+    --color-lk-2: #2E2E8C;
+    --color-lk-3: #4646CC;
+    --color-lk-4: #7474E8;
+    --color-lk-5: #B8B8EF;
+    --color-lk-6: #ECECFF;
+
+    --font-DigitalDiscoRegular: DigitalDiscoRegular;
+    --font-DigitalDiscoThin: DigitalDiscoThin;
+}
+
+body {
+    background-color: var(--color-lk-0);
+}
