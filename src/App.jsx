@@ -17,7 +17,7 @@ function Header() {
         Hello! I'm
       </h1>
       <img className="w-64 h-auto"
-        src="./src/assets/images/lazykeys_LogoAnim_Large.gif" 
+        src="src/assets/images/lazykeys_LogoAnim.webp" 
         alt="lazykeys logo" 
         width="960" 
         height="320">
