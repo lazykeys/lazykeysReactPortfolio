@@ -2,41 +2,37 @@
     "work": [
         {
             "id": 1,
-            "iconPath": "src/assets/images/experience_icons/lionheartstudiosllc_logo.webp",
+            "icon": "lionheart",
             "employer": "Lionheart Studios, LLC",
             "position": "Gameplay Programmer Intern",
             "startDate": "Apr 2026",
             "endDate": "Present",
             "notes": [
-                "Lorem ipsum dolor sed amet", 
-                "Lorem ipsum dolor sed amet", 
-                "Lorem ipsum dolor sed amet" 
+                "Gameplay programmer for an unannounced game with a planned release on Steam."
             ]
         },
         {
             "id": 2,
-            "iconPath": "src/assets/images/experience_icons/gamesforlove_logo.webp",
+            "icon": "gfl",
             "employer": "Games For Love",
             "position": "Gameplay Programmer Intern",
             "startDate": "Feb 2026",
             "endDate": "Apr 2026",
             "notes": [
-                "Lorem ipsum dolor sed amet", 
-                "Lorem ipsum dolor sed amet", 
-                "Lorem ipsum dolor sed amet" 
+                "Led enemy spawning development in a team of 8 programmers, utilizing Unity to create a tunable spawning system for designers to easily work with.",
+                "Collaborated with other developers for integration with player movement, item spawning, and game loop systems."
             ]
         },
         {
             "id": 3,
-            "iconPath": "src/assets/images/experience_icons/usf_logo.webp",
+            "icon": "usf",
             "employer": "University of Saint Francis - College of Health Sciences",
             "position": "Immersive Simulation Developer",
             "startDate": "Oct 2024",
             "endDate": "Oct 2025",
             "notes": [
-                "Lorem ipsum dolor sed amet", 
-                "Lorem ipsum dolor sed amet", 
-                "Lorem ipsum dolor sed amet" 
+                "Created medical imaging and training scenarios for the College's immersive laboratory.",
+                "Utilized the lab's proprietary software and Unity to develop web-based applications."
             ]
         }
     ],
@@ -44,7 +40,7 @@
     "education": [
         {
             "id": 1,
-            "iconPath": null,
+            "icon": "usf",
             "school": "University of Saint Francis",
             "location": "Fort Wayne, IN",
             "degree": "Gameplay Programmer Intern",
@@ -62,7 +58,7 @@
     "projects": [
         {
             "id": 1,
-            "iconPath": null,
+            "icon": null,
             "title": "Uphill Battle",
             "position": "Lead Programmer",
             "platform": "Unity 3D",
@@ -75,7 +71,7 @@
         },
         {
             "id": 2,
-            "iconPath": null,
+            "icon": null,
             "title": "30 Minutes or it's Free",
             "position": "Lead Programmer",
             "platform": "Unity 3D",

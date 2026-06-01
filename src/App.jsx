@@ -2,6 +2,7 @@ import logo from "./assets/images/lazykeys_LogoAnim.webp";
 import { Button } from "./components/Button.jsx";
 import { Experience } from "./components/Experience.jsx";
 import { Svg } from "./components/Svg.jsx";
+import { Image } from "./components/Image.jsx"
 
 export default function App() {
   return (
@@ -21,12 +22,7 @@ function Header() {
       <h1 className="text-lk-6 font-DigitalDiscoRegular text-3xl">
         Hello! I'm
       </h1>
-      <img className="w-64 h-auto"
-        src={logo}
-        alt="lazykeys logo" 
-        width="960" 
-        height="320">
-      </img>
+      <Image className="w-64 h-auto" src="lazykeys" width="960" height="320" alt="lazykeys logo"/>
       <h1 className="text-lk-6 font-DigitalDiscoRegular text-3xl">
         aka Jagger Walraven
       </h1>

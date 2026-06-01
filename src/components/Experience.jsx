@@ -1,6 +1,8 @@
 import { Button } from "./Button";
 import { Svg } from "./Svg";
+import { Image } from "./Image";
 import experiences from "../assets/data/experiences.json"
+import logo from "/src/assets/images/experience_icons/lionheartstudiosllc_logo.webp";
 
 export function Experience() {
     return (
@@ -10,7 +12,7 @@ export function Experience() {
                 {experiences.work.map(experience => (
                     <ExperienceItem 
                         key={experience.id}
-                        iconPath={experience.iconPath}
+                        icon={experience.icon}
                         header={experience.employer}
                         subheader={experience.position}
                         startDate={experience.startDate}
@@ -33,11 +35,11 @@ function Tabs() {
     )
 }
 
-function ExperienceItem({ iconPath, header, subheader, startDate, endDate, notes }) {
+function ExperienceItem({ icon, header, subheader, startDate, endDate, notes }) {
     return (
         <div className="flex">
             <div className="flex flex-col m-3">
-                <img className="mask-radial-at-center mask-radial-from-70% mask-radial-to-70% mask-circle min-w-14 w-14 bg-white" src={iconPath}/>
+                <Image variant="icon" src={icon}/>
                 <div className="flex h-full">
                     <div className="border-r-2 border-lk-2 w-1/2 mb-2"></div>
                     <div className="border-l-2 border-lk-2 w-1/2 mb-2"></div>
