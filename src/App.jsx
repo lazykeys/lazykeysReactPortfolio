@@ -1,4 +1,5 @@
 import logo from "./assets/images/lazykeys_LogoAnim.webp";
+import { Button } from "./components/Button.jsx";
 import { Experience } from "./components/Experience.jsx";
 
 export default function App() {
@@ -8,6 +9,7 @@ export default function App() {
       <Subheader/>
       <About/>
       <Experience/>
+      <Button variant="primary">Resume</Button>
       <Links/>
     </div>
   )

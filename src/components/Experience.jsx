@@ -2,18 +2,20 @@ import { Button } from "./Button"
 
 export function Experience() {
     return (
-        <section className="border-5 border-lk-3 rounded-xl w-full h-128">
-            <ExperienceTab/>
-        </section>
+        <div className="flex flex-col gap-3">
+            <Tabs/>
+            <section className="border-5 border-lk-3 rounded-xl w-full h-128">
+            </section>
+        </div>
     )
 }
 
-function ExperienceTab() {
+function Tabs() {
     return (
-        <div className="flex justify-between items-center border-b-5 border-b-lk-3">
-            <Button>Work</Button>
-            <Button>Education</Button>
-            <Button>Projects</Button>
+        <div className="flex w-full justify-around items-center px-1 border-7 border-lk-3 rounded-xl bg-lk-3">
+            <Button variant="tabular">Work</Button>
+            <Button variant="tabular">Education</Button>
+            <Button variant="tabular">Projects</Button>
         </div>
     )
 }
