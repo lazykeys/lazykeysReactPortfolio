@@ -5,6 +5,7 @@ import { Svg } from "./components/Svg.jsx";
 import { Image } from "./components/Image.jsx"
 
 export default function App() {
+
   return (
     <div className="flex flex-col m-6 w-auto gap-6">
       <Header/>

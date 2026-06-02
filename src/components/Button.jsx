@@ -17,8 +17,6 @@ function getVariantStyles(variant) {
     switch (variant) {
         case "primary":
             return "text-xl text-lk-6 w-full font-DigitalDiscoRegular h-16"
-        case "tabular":
-            return "text-2xl text-lk-6 w-1/3 font-DigitalDiscoThin rounded-lg"
         case "svg":
             return "fill-lk-3 hover:fill-lk-4 transition-colors"
     }

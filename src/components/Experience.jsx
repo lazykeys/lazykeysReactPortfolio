@@ -1,36 +1,62 @@
 import { Button } from "./Button";
 import { Svg } from "./Svg";
 import { Image } from "./Image";
-import experiences from "../assets/data/experiences.json"
 import logo from "/src/assets/images/experience_icons/lionheartstudiosllc_logo.webp";
+import { RadioButton } from "./RadioButton";
+import { RadioButtonGroup } from "./RadioButtonGroup";
+import experiences from "../assets/data/experiences.json"
+
 
 export function Experience() {
+
+    let radioButtons = [
+        { id: 1, value: "Work", active: true, data: experiences.work },
+        { id: 2, value: "Education", active: false, data: experiences.education },
+        { id: 3, value: "Projects", active: false, data: experiences.projects }
+    ];
+
+    function setActiveRadioButton({ id }) {
+        const idButton = radioButtons.filter(radioButton => radioButton.id === id);
+        if (idButton.active) return;
+
+        idButton.active = true;
+
+        const otherButtons = radioButtons.filter(radioButton => radioButton.id !== id);
+        otherButtons.forEach(button => button.active = false);
+    }
+    
+    const activeRadioButton = radioButtons.filter(radioButton => radioButton.active)[0];
+    
     return (
         <div className="flex flex-col gap-3">
-            <Tabs/>
+            <RadioButtonGroup>
+                {radioButtons.map(radioButton => (
+                    <RadioButton 
+                        key={radioButton.id} 
+                        id={radioButton.id} 
+                        group="tabs"
+                        value={radioButton.value}
+                        active={radioButton.active}
+                        data={radioButton.data}
+                        setActiveRadioButton={setActiveRadioButton}
+                    >
+                        {radioButton.value}
+                    </RadioButton>
+                ))}
+            </RadioButtonGroup>
             <section className="border-5 border-lk-3 rounded-xl w-full h-fit">
-                {experiences.work.map(experience => (
+                {activeRadioButton.data.map(data => (
                     <ExperienceItem 
-                        key={experience.id}
-                        icon={experience.icon}
-                        header={experience.employer}
-                        subheader={experience.position}
-                        startDate={experience.startDate}
-                        endDate={experience.endDate}
-                        notes={experience.notes}
+                        key={data.id}
+                        icon={data.icon}
+                        header={data.employer}
+                        subheader={data.position}
+                        startDate={data.startDate}
+                        endDate={data.endDate}
+                        notes={data.notes}
                     />
                 ))}
             </section>
-        </div>
-    )
-}
-
-function Tabs() {
-    return (
-        <div className="flex w-full justify-around items-center border-7 border-lk-3 p-0.5 rounded-xl bg-lk-3">
-            <Button variant="tabular">Work</Button>
-            <Button variant="tabular">Education</Button>
-            <Button variant="tabular">Projects</Button>
         </div>
     )
 }
@@ -47,17 +73,17 @@ function ExperienceItem({ icon, header, subheader, startDate, endDate, notes }) 
             </div>
             <div className="flex flex-col m-3 w-full">
                 <h1 className="text-xl text-lk-6 font-DigitalDiscoRegular">{header}</h1>
-                <div className="flex justify-between">
+                <div className="flex justify-between items-center">
                     <h2 className="text-lg text-lk-6 font-DigitalDiscoThin">{subheader}</h2>
-                    <div className="flex w-fit justify-between items-center gap-1">
-                        <h3 className="text-md text-lk-6 font-DigitalDiscoThin">{startDate}</h3>
+                    <div className="flex w-fit justify-between gap-1">
+                        <h3 className="text-md text-lk-6 font-DigitalDiscoThin text-nowrap">{startDate}</h3>
                         <h3 className="text-md text-lk-6 font-DigitalDiscoThin">-</h3>
-                        <h3 className="text-md text-lk-6 font-DigitalDiscoThin">{endDate}</h3>
+                        <h3 className="text-md text-lk-6 font-DigitalDiscoThin text-nowrap">{endDate}</h3>
                     </div>
                 </div>
                 <ul className="list-disc">
-                    {notes.map(note => (
-                        <li className="text-base ml-3 text-lk-6 font-DigitalDiscoThin">{note}</li>
+                    {notes.map((note, index) => (
+                        <li key={index} className="text-base ml-3 text-lk-6 font-DigitalDiscoThin">{note}</li>
                     ))}
                 </ul>
             </div>
