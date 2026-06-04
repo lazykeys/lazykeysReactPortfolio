@@ -22,21 +22,23 @@ export function Experience() {
     
     return (
         <div className="flex flex-col gap-3">
-            <RadioButtonGroup>
+            <fieldset 
+                className="flex w-full justify-around items-center border-7 border-lk-3 p-0.5 rounded-xl bg-lk-3 gap-2">
                 {radioButtons.map(radioButton => (
                     <RadioButton 
-                        key={radioButton.id} 
-                        id={radioButton.id} 
-                        group="tabs"
-                        value={radioButton.value}
-                        active={radioButton.active}
-                        radioButtons={radioButtons}
-                        setRadioButtons={updateState}
+                    key={radioButton.id} 
+                    id={radioButton.id} 
+                    group="tabs"
+                    value={radioButton.value}
+                    active={radioButton.active}
+                    radioButtons={radioButtons}
+                    setRadioButtons={updateState}
                     >
                         {radioButton.value}
                     </RadioButton>
                 ))}
-            </RadioButtonGroup>
+            </fieldset>
+            
             <section className="border-5 border-lk-3 rounded-xl w-full h-fit">
                 {radioButtons.filter(radioButtons => radioButtons.active)[0].data.map(data => (
                     <ExperienceItem 
