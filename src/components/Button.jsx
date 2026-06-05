@@ -1,9 +1,10 @@
 import { twMerge } from "tailwind-merge";
 
-export function Button({ variant = "primary", className, ...props }) {
+export function Button({ variant = "primary", onClick, className, ...props }) {
     return (
         <button 
-            {...props} 
+            {...props}
+            onClick={onClick}
             className={twMerge(
                 "text-base text-lk-6 bg-lk-3 hover:bg-lk-4 font-DigitalDiscoRegular rounded transition-colors",
                 getVariantStyles(variant),

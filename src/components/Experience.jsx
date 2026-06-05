@@ -57,23 +57,14 @@ function ExperienceItem({ value, data }) {
         case "Education":
             return (
                 <div className="flex">
-                    <div className="flex flex-col m-3">
-                        <Image variant="icon" src={data.icon}/>
-                        <div className="flex h-full">
-                            <div className="border-r-2 border-lk-2 w-1/2 mb-2"></div>
-                            <div className="border-l-2 border-lk-2 w-1/2 mb-2"></div>
-                        </div>
-                    </div>
+                    <IconBorder icon={data.icon}/>
                     <div className="flex flex-col m-3 w-full">
-                        <h1 className="text-xl text-lk-6 font-DigitalDiscoRegular">{data.header}</h1>
-                        <div className="flex justify-between items-center">
-                            <h2 className="text-lg text-lk-6 font-DigitalDiscoThin">{data.subheader}</h2>
-                            <div className="flex w-fit justify-between gap-1">
-                                <h3 className="text-md text-lk-6 font-DigitalDiscoThin text-nowrap">{data.startDate}</h3>
-                                <h3 className="text-md text-lk-6 font-DigitalDiscoThin">-</h3>
-                                <h3 className="text-md text-lk-6 font-DigitalDiscoThin text-nowrap">{data.endDate}</h3>
-                            </div>
-                        </div>
+                        <ItemHeader 
+                            header={data.header} 
+                            subheader={data.subheader} 
+                            startDate={data.startDate} 
+                            endDate={data.endDate}
+                        />
                         <ul className="list-disc">
                             {data.notes.map((note, index) => (
                                 <li key={index} className="text-base ml-3 text-lk-6 font-DigitalDiscoThin">{note}</li>
@@ -85,4 +76,32 @@ function ExperienceItem({ value, data }) {
         case "Projects":
             return null;
     }
+}
+
+function IconBorder ({ icon }) {
+    return (
+        <div className="flex flex-col m-3">
+            <Image variant="icon" src={icon}/>
+            <div className="flex h-full">
+                <div className="border-r-2 border-lk-2 w-1/2 mb-2"></div>
+                <div className="border-l-2 border-lk-2 w-1/2 mb-2"></div>
+            </div>
+        </div>
+    )
+}
+
+function ItemHeader ({ header, subheader, startDate, endDate}) {
+    return (
+        <div>
+            <h1 className="text-xl text-lk-6 font-DigitalDiscoRegular">{header}</h1>
+            <div className="flex justify-between items-center">
+                <h2 className="text-lg text-lk-6 font-DigitalDiscoThin">{subheader}</h2>
+                <div className="flex w-fit justify-between gap-1">
+                    <h3 className="text-md text-lk-6 font-DigitalDiscoThin text-nowrap">{startDate}</h3>
+                    <h3 className="text-md text-lk-6 font-DigitalDiscoThin">-</h3>
+                    <h3 className="text-md text-lk-6 font-DigitalDiscoThin text-nowrap">{endDate}</h3>
+                </div>
+            </div>
+        </div>
+    );
 }
