@@ -94,7 +94,7 @@ function ItemHeader ({ header, subheader, startDate, endDate}) {
     return (
         <div>
             <h1 className="text-xl text-lk-6 font-DigitalDiscoRegular">{header}</h1>
-            <div className="flex max-lg:flex-col max-lg:items-baseline flex-row justify-between items-center">
+            <div className="flex flex-col justify-between">
                 <h2 className="text-lg text-lk-6 font-DigitalDiscoThin">{subheader}</h2>
                 <div className="flex w-fit justify-between gap-1">
                     <h3 className="text-md text-lk-6 font-DigitalDiscoThin text-nowrap">{startDate}</h3>

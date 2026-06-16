@@ -6,9 +6,9 @@ import resume from "./assets/data/Jagger Walraven's Resume.pdf";
 
 export default function App() {
   return (
-    <div className="flex justify-center items-center">
-      <div className="flex flex-col m-6 gap-6 h-full w-auto lg:grid lg:grid-cols-2 lg:max-w-5xl lg:justify-center lg:m-8">
-        <div className="flex flex-col h-full gap-6">
+    <div className="flex justify-center items-center h-screen">
+      <div className="flex flex-col m-6 gap-6 lg:grid lg:grid-cols-2 lg:max-w-5xl lg:justify-center lg:m-8">
+        <div className="flex flex-col gap-6">
           <Header/>
           <Subheader/>
           <About/>
