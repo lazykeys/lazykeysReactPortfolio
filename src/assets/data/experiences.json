@@ -59,26 +59,51 @@
             "image": "uphillBattle",
             "header": "Uphill Battle",
             "subheader": "Lead Programmer",
-            "platform": "Unity 3D",
             "year": "2025",
             "notes": [
                 "Lorem ipsum dolor sed amet", 
                 "Lorem ipsum dolor sed amet", 
                 "Lorem ipsum dolor sed amet" 
-            ]
+            ],
+            "tags": [
+                "Unity",
+                "C#"
+            ],
+            "link": ""
         },
         {
             "id": 2,
             "image": "uphillBattle",
             "header": "30 Minutes or it's Free",
             "subheader": "Lead Programmer",
-            "platform": "Unity 3D",
             "year": "2025",
             "notes": [
                 "Lorem ipsum dolor sed amet", 
                 "Lorem ipsum dolor sed amet", 
                 "Lorem ipsum dolor sed amet" 
-            ]
+            ],
+            "tags": [
+                "Unity",
+                "C#"
+            ],
+            "link": ""
+        },
+        {
+            "id": 3,
+            "image": "uphillBattle",
+            "header": "30 Minutes or it's Free",
+            "subheader": "Lead Programmer",
+            "year": "2025",
+            "notes": [
+                "Lorem ipsum dolor sed amet", 
+                "Lorem ipsum dolor sed amet", 
+                "Lorem ipsum dolor sed amet" 
+            ],
+            "tags": [
+                "Unity",
+                "C#"
+            ],
+            "link": ""
         }
     ]
 }

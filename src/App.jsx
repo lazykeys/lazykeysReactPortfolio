@@ -6,7 +6,7 @@ import resume from "./assets/data/Jagger Walraven's Resume.pdf";
 
 export default function App() {
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="flex justify-center items-center lg:h-screen">
       <div className="flex flex-col m-6 gap-6 lg:grid lg:grid-cols-2 lg:max-w-5xl lg:h-11/12 lg:justify-center lg:m-8">
         <div className="flex flex-col gap-6">
           <Header/>
@@ -14,7 +14,9 @@ export default function App() {
           <About/>
         </div>
           <Experience/>
+        <div className="flex w-full items-end">
           <Links/>
+        </div>
       </div>
     </div>
   )
@@ -61,7 +63,7 @@ function About() {
 
 function Links() {
   return (
-    <div className="flex flex-col items-center justify-center gap-3 lg:max-w-sm">
+    <div className="flex flex-col items-center justify-center gap-3 w-full lg:max-w-sm">
       <Button variant="primary" onClick={() => window.open(resume)}>
         <div className="flex justify-center items-baseline gap-2">
           <span className="text-3xl font">Resume</span>

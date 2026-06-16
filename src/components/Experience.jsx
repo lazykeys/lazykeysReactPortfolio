@@ -83,7 +83,7 @@ function ExperienceItem({ data }) {
 
 function ProjectItem({ data }) {
     return (
-        <div className="flex flex-col w-fit m-3">
+        <div className="flex flex-col w-fit mx-3 mt-3">
             <ThumbnailBorder image={data.image}/>
             <div className="flex m-3 mt-0 h-full border-l-5 border-lk-2 pl-4 pt-4">
                 <div className="flex-col w-full justify-center items-center">
@@ -138,4 +138,8 @@ function ItemHeader ({ header, subheader, startDate, endDate}) {
             </div>
         </div>
     );
+}
+
+function ProjectItemHeader ({ header, subheader }) {
+    return null;
 }
