@@ -22,7 +22,7 @@ export function Experience() {
     }
     
     return (
-        <div className="flex flex-col gap-3 h-full">
+        <div className="flex flex-col h-full gap-3 lg:row-span-2 lg:col-span-1 overflow-hidden">
             <fieldset 
                 className="flex w-full justify-around items-center border-7 border-lk-3 p-0.5 rounded-xl bg-lk-3 gap-2">
                 {radioButtons.map(radioButton => (
@@ -40,48 +40,86 @@ export function Experience() {
                 ))}
             </fieldset>
             
-            <section className="border-5 border-lk-3 rounded-xl w-full h-full flex flex-col">
+            <section className="border-5 border-lk-3 rounded-xl w-full h-full flex flex-col overflow-y-auto scrollbar-none">
                 {activeRadioButton.data.map(data => (
-                    <ExperienceItem key={data.id} value={activeRadioButton.value} data={data}/>
+                    <PortfolioItem key={data.id} value={activeRadioButton.value} data={data}/>
                 ))}
             </section>
         </div>
     )
 }
 
-function ExperienceItem({ value, data }) {
-
+function PortfolioItem({value, data}) {
     switch (value)
     {
         case "Work":
         case "Education":
-            return (
-                <div className="flex h-fit">
-                    <IconBorder icon={data.icon}/>
-                    <div className="flex flex-col m-3 w-full">
-                        <ItemHeader 
-                            header={data.header} 
-                            subheader={data.subheader} 
-                            startDate={data.startDate} 
-                            endDate={data.endDate}
-                        />
-                        <ul className="list-disc">
-                            {data.notes.map((note, index) => (
-                                <li key={index} className="text-base ml-3 text-lk-6 font-DigitalDiscoThin">{note}</li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
-            )
+            return <ExperienceItem data={data}/>
         case "Projects":
-            return null;
+            return <ProjectItem data={data}/>
     }
 }
 
-function IconBorder ({ icon }) {
+function ExperienceItem({ data }) {
+    return (
+        <div className="flex h-fit">
+            <IconBorder image={data.image}/>
+            <div className="flex flex-col m-3 w-full">
+                <ItemHeader 
+                    header={data.header} 
+                    subheader={data.subheader} 
+                    startDate={data.startDate} 
+                    endDate={data.endDate}
+                />
+                <ul className="list-disc">
+                    {data.notes.map((note, index) => (
+                        <li key={index} className="text-base ml-3 text-lk-6 font-DigitalDiscoThin">{note}</li>
+                    ))}
+                </ul>
+            </div>
+        </div>
+    )
+}
+
+function ProjectItem({ data }) {
+    return (
+        <div className="flex flex-col w-fit m-3">
+            <ThumbnailBorder image={data.image}/>
+            <div className="flex m-3 h-full">
+                <div className="flex h-full w-full">
+                    <div className="border-r-2 border-lk-2 mb-2 -mt-10"></div>
+                    <div className="border-l-2 border-lk-2 mb-2 -mt-10"></div>
+                </div>
+                <div className="flex-col w-full justify-center items-center">
+                    <ItemHeader 
+                        header={data.header} 
+                        subheader={data.subheader} 
+                        startDate={data.startDate} 
+                        endDate={data.endDate}
+                    />
+                    <ul className="list-disc">
+                        {data.notes.map((note, index) => (
+                            <li key={index} className="text-base ml-3 text-lk-6 font-DigitalDiscoThin">{note}</li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+function ThumbnailBorder({ image }) {
+    return (
+    <div className="flex flex-col m-3">
+        <Image variant="thumbnail" src={image}/>
+    </div>
+)
+}
+
+function IconBorder ({ image }) {
     return (
         <div className="flex flex-col m-3">
-            <Image variant="icon" src={icon}/>
+            <Image variant="icon" src={image}/>
             <div className="flex h-full">
                 <div className="border-r-2 border-lk-2 w-1/2 mb-2"></div>
                 <div className="border-l-2 border-lk-2 w-1/2 mb-2"></div>

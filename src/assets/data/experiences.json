@@ -2,7 +2,7 @@
     "work": [
         {
             "id": 1,
-            "icon": "lionheart",
+            "image": "lionheart",
             "header": "Lionheart Studios, LLC",
             "subheader": "Gameplay Programmer Intern",
             "startDate": "Apr 2026",
@@ -13,7 +13,7 @@
         },
         {
             "id": 2,
-            "icon": "gfl",
+            "image": "gfl",
             "header": "Games For Love",
             "subheader": "Gameplay Programmer Intern",
             "startDate": "Feb 2026",
@@ -25,7 +25,7 @@
         },
         {
             "id": 3,
-            "icon": "usf",
+            "image": "usf",
             "header": "University of Saint Francis - College of Health Sciences",
             "subheader": "Immersive Simulation Developer",
             "startDate": "Oct 2024",
@@ -40,7 +40,7 @@
     "education": [
         {
             "id": 1,
-            "icon": "usf",
+            "image": "usf",
             "header": "University of Saint Francis",
             "subheader": "BS in Game and Application Development",
             "startDate": "Aug 2022",
@@ -56,7 +56,7 @@
     "projects": [
         {
             "id": 1,
-            "icon": null,
+            "image": "uphillBattle",
             "header": "Uphill Battle",
             "subheader": "Lead Programmer",
             "platform": "Unity 3D",
@@ -69,8 +69,8 @@
         },
         {
             "id": 2,
-            "icon": null,
-            "title": "30 Minutes or it's Free",
+            "image": "uphillBattle",
+            "header": "30 Minutes or it's Free",
             "subheader": "Lead Programmer",
             "platform": "Unity 3D",
             "year": "2025",
