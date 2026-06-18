@@ -51,13 +51,20 @@ function Subheader() {
 
 function About() {
   return (
-    <p className="text-lk-6 font-DigitalDiscoThin text-base lg:text-xl max-w-96">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
+    <section className="flex flex-col justify-center items-baseline gap-4">
+      <p className="text-lk-6 font-DigitalDiscoThin text-base lg:text-xl max-w-96">
+        I'm an application developer who loves creating meaningful experiences, used by either
+        a mouse or a controller. My passion for game and web development springs from the importance
+        I place on user satisfaction through accessibility, aesthetics, and a little adventure!
+      </p>
+
+      <p className="text-lk-6 font-DigitalDiscoThin text-base lg:text-xl max-w-96">
+        My toolkit consists of over four years of Unity Engine and C# gained through my collegiate career,
+        including class projects, solo development, and game jams. My frontend skills gained through college 
+        include HTML, CSS, and JavaScript, which set me up to learn more advanced topics such as React.js 
+        and Tailwind CSS on my own. 
+      </p>
+    </section>
   )
 }
 
