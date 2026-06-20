@@ -1,5 +1,5 @@
 import { Button } from "./components/Button.jsx";
-import { Experience } from "./components/Experience.jsx";
+import { Portfolio } from "./components/Portfolio.jsx";
 import { Svg } from "./components/Svg.jsx";
 import { Image } from "./components/Image.jsx";
 import resume from "./assets/data/Jagger Walraven's Resume.pdf";
@@ -13,7 +13,7 @@ export default function App() {
           <Subheader/>
           <About/>
         </div>
-          <Experience/>
+          <Portfolio/>
           <Links/>
       </div>
     </div>
