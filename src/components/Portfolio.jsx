@@ -4,8 +4,8 @@ import logo from "/src/assets/images/experience_icons/lionheartstudiosllc_logo.w
 import { RadioButton } from "./RadioButton";
 import portfolioData from "../assets/data/portfolio.json"
 import { useState } from "react";
-import { ExperienceHeader, ExperienceItem, IconBorder } from "./Experience";
-import { ProjectHeader, ProjectItem, ThumbnailBorder } from "./Project";
+import { ExperienceItem } from "./Experience";
+import { ProjectItem } from "./Project";
 
 
 export function Portfolio() {

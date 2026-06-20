@@ -6,6 +6,8 @@ import gflLogo from "/src/assets/images/experience_icons/gamesforlove_logo.webp"
 import uphillBattleThumbnail from "/src/assets/images/project_thumbnails/uphill_battle_thumb.webp";
 import thirtyMOIFThumbnail from "/src/assets/images/project_thumbnails/30MOIF_thumb.webp";
 import fortuneQuellerThumbnail from "/src/assets/images/project_thumbnails/fortune_queller_thumb.webp";
+import diggyDogThumbnail from "/src/assets/images/project_thumbnails/diggy_dog_thumb.webp";
+import toiletTimeTravelerThumbnail from "/src/assets/images/project_thumbnails/toilet_time_traveler_thumb.webp";
 
 export function Image({ variant = null, src, className, ...props }) {
     return (
@@ -47,5 +49,9 @@ function getImageSource(src) {
             return thirtyMOIFThumbnail;
         case "fortuneQueller":
             return fortuneQuellerThumbnail;
+        case "diggyDog":
+            return diggyDogThumbnail;
+        case "toiletTimeTraveler":
+            return toiletTimeTravelerThumbnail;
     }
 }
