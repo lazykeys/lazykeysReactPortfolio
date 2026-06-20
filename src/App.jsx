@@ -8,15 +8,13 @@ export default function App() {
   return (
     <div className="flex justify-center items-center lg:h-screen">
       <div className="flex flex-col m-6 gap-6 lg:grid lg:grid-cols-2 lg:max-w-5xl lg:h-11/12 lg:justify-center lg:m-8">
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 lg:max-w-sm">
           <Header/>
           <Subheader/>
           <About/>
         </div>
           <Experience/>
-        <div className="flex w-full items-end">
           <Links/>
-        </div>
       </div>
     </div>
   )
@@ -57,10 +55,8 @@ function About() {
         I place on user satisfaction through accessibility, aesthetics, and a little adventure!
       </p>
       <p className="text-lk-6 font-DigitalDiscoThin text-base lg:text-xl max-w-96">
-        My toolkit consists of over four years of Unity Engine and C# gained through my collegiate career,
-        including class projects, solo development, and game jams. My frontend skills gained through college 
-        include HTML, CSS, and JavaScript, which set me up to learn more advanced topics such as React.js 
-        and Tailwind CSS on my own. 
+        My toolkit consists of over four years of Unity Engine and C# gained through class projects, solo development, and game jams. 
+        My frontend tools include HTML, CSS, JavaScript, React.js and Tailwind CSS. 
       </p>
     </section>
   )
@@ -68,7 +64,7 @@ function About() {
 
 function Links() {
   return (
-    <div className="flex flex-col items-center justify-center gap-3 w-full lg:max-w-sm">
+    <div className="flex flex-col justify-center gap-2 lg:max-w-sm">
       <Button variant="primary" onClick={() => window.open(resume)}>
         <div className="flex justify-center items-baseline gap-2">
           <span className="text-3xl font">Resume</span>
@@ -76,10 +72,10 @@ function Links() {
         </div>
       </Button>
       <nav className="flex items-center justify-between w-full pt-2 pl-4 pr-4">
-        <Svg icon="github" href="https://github.com/lazykeys"></Svg>
-        <Svg icon="itch" href="https://lazykeys.itch.io/"></Svg>
-        <Svg icon="linkedin" href="https://www.linkedin.com/in/jaggerwalraven/"></Svg>
-        <Svg icon="email" href="mailto:jagger.walraven.stcharlesprep@gmail.com"></Svg>
+        <Svg icon="github" href="https://github.com/lazykeys"/>
+        <Svg icon="itch" href="https://lazykeys.itch.io/"/>
+        <Svg icon="linkedin" href="https://www.linkedin.com/in/jaggerwalraven/"/>
+        <Svg icon="email" href="mailto:jagger.walraven.stcharlesprep@gmail.com"/>
       </nav>
     </div>
   )
